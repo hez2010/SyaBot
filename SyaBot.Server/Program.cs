@@ -45,10 +45,10 @@ namespace SyaBot.Server
             while (true)
             {
                 var result = await client.ReceiveAsync();
-                Console.WriteLine(Encoding.UTF8.GetString(result.Buffer));
+                Console.WriteLine($"Raw request string: {Encoding.UTF8.GetString(result.Buffer)}");
                 var request = JsonSerializer.Deserialize<RequestModel>(result.Buffer);
                 if (request is null) continue;
-                Console.WriteLine(request.Type);
+                Console.WriteLine($"Request id: {request.Id}, type: {request.Type}");
 
                 if (!handlers.ContainsKey(request.Type)) continue;
                 var (type, handler) = handlers[request.Type];
@@ -56,7 +56,7 @@ namespace SyaBot.Server
                 var data = JsonSerializer.Deserialize(result.Buffer, type);
                 if (data is null) continue;
 
-                Console.WriteLine($"Map handler: {type}");
+                Console.WriteLine($"Map handler: {handler}");
 
                 var context = CreateUdpContext(type, result.RemoteEndPoint, data);
                 if (context is null) continue;

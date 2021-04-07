@@ -17,6 +17,6 @@ namespace SyaBot.Shared
         }
 
         public string Type { get; init; } = default!;
-        public string Id { get; } = Guid.NewGuid().ToString();
+        public string Id { get; set; } = Guid.NewGuid().ToString();
     }
 }
