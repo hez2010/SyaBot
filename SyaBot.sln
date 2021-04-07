@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.218
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyaBot", "SyaBot.csproj", "{FB7AD595-F130-4C61-801A-7EA634DAA7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyaBot.Client", "SyaBot.Client\SyaBot.Client.csproj", "{FB7AD595-F130-4C61-801A-7EA634DAA7B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyaBot.Server", "SyaBot.Server\SyaBot.Server.csproj", "{C6FA3942-6C05-4173-8A56-1305DF893A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyaBot.Shared", "SyaBot.Shared\SyaBot.Shared.csproj", "{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{FB7AD595-F130-4C61-801A-7EA634DAA7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB7AD595-F130-4C61-801A-7EA634DAA7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB7AD595-F130-4C61-801A-7EA634DAA7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FA3942-6C05-4173-8A56-1305DF893A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FA3942-6C05-4173-8A56-1305DF893A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FA3942-6C05-4173-8A56-1305DF893A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FA3942-6C05-4173-8A56-1305DF893A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

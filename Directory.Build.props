@@ -4,7 +4,12 @@
     <IlcFoldIdenticalMethodBodies>true</IlcFoldIdenticalMethodBodies>
     <TrimMode>Link</TrimMode>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="6.0.0-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TrimmerRootAssembly Include="SyaBot.Shared" />
   </ItemGroup>
 </Project>
