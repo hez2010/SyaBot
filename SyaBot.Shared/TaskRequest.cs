@@ -1,6 +1,6 @@
 ﻿namespace SyaBot.Shared
 {
-    public class TaskRequest : RequestModel<TaskRequest>
+    public class TaskRequest : SyaRequest
     {
         public TaskRequest(string uri)
         {

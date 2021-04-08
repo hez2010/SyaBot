@@ -1,6 +1,6 @@
 ﻿namespace SyaBot.Shared
 {
-    public class RegisterRequest : RequestModel<RegisterRequest>
+    public class RegisterRequest : SyaRequest
     {
         public RegisterRequest(string name)
         {

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SyaBot.Server
 {
-    class UdpContext<T> where T : RequestModel
+    class UdpContext<T> where T : SyaRequest
     {
         public UdpContext(MethodInfo method, IPEndPoint? remote, T data)
         {
@@ -36,7 +36,7 @@ namespace SyaBot.Server
             return Activator.CreateInstance(typeof(UdpContext<>).MakeGenericType(dataType), method, remote, data);
         }
 
-        static void AddHandler<T>(Func<UdpContext<T>, Task> handler) where T : RequestModel
+        static void AddHandler<T>(Func<UdpContext<T>, Task> handler) where T : SyaRequest
         {
             handlers[typeof(T).ToString()] = (typeof(T), d => handler((UdpContext<T>)d), handler.Method);
         }
@@ -50,7 +50,7 @@ namespace SyaBot.Server
             {
                 var result = await client.ReceiveAsync();
                 Console.WriteLine($"Raw request string: {Encoding.UTF8.GetString(result.Buffer)}");
-                var request = JsonSerializer.Deserialize<RequestModel>(result.Buffer);
+                var request = JsonSerializer.Deserialize<SyaRequest>(result.Buffer);
                 if (request is null) continue;
                 Console.WriteLine($"Request id: {request.Id}, type: {request.Type}");
 
