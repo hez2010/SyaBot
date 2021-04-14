@@ -1,0 +1,8 @@
+<Directives>
+  <Application>
+    <Assembly Name="mscorlib">
+        <Type Name="System.Threading.Tasks.Task`1[System.Object]" Dynamic="Required All">
+        </Type>
+    </Assembly>
+  </Application>
+</Directives>

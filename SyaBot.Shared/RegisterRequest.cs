@@ -1,12 +1,7 @@
 ﻿namespace SyaBot.Shared
 {
-    public class RegisterRequest : SyaRequest
+    public class RegisterRequest : SyaMessage
     {
-        public RegisterRequest(string name)
-        {
-            Name = name;
-        }
-
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }

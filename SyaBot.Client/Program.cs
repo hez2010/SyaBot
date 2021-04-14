@@ -15,10 +15,10 @@ namespace SyaBot.Client
         static async Task Main(string[] args)
         {
             ThreadPool.UnsafeQueueUserWorkItem(ReceiveThread, null);
-            var message1 = JsonSerializer.SerializeToUtf8Bytes(new RegisterRequest("hello"));
+            var message1 = JsonSerializer.SerializeToUtf8Bytes(new RegisterRequest { Name = "hello" });
             await client.SendAsync(message1, message1.Length, "255.255.255.255", 40080);
 
-            var message2 = JsonSerializer.SerializeToUtf8Bytes(new TaskRequest("uri"));
+            var message2 = JsonSerializer.SerializeToUtf8Bytes(new TaskRequest { Uri = "uri" });
             await client.SendAsync(message2, message2.Length, "255.255.255.255", 40080);
             await Semaphore.WaitAsync();
         }

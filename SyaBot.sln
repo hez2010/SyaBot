@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyaBot.Client", "SyaBot.Cli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyaBot.Server", "SyaBot.Server\SyaBot.Server.csproj", "{C6FA3942-6C05-4173-8A56-1305DF893A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyaBot.Shared", "SyaBot.Shared\SyaBot.Shared.csproj", "{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyaBot.Shared", "SyaBot.Shared\SyaBot.Shared.csproj", "{92BE2F00-CE67-4D3C-BC26-5B74D518EB11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,12 +1,7 @@
 ﻿namespace SyaBot.Shared
 {
-    public class TaskRequest : SyaRequest
+    public class TaskRequest : SyaMessage
     {
-        public TaskRequest(string uri)
-        {
-            Uri = uri;
-        }
-
-        public string Uri { get; }
+        public string? Uri { get; set; }
     }
 }

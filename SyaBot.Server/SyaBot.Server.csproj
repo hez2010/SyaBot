@@ -10,4 +10,8 @@
     <ProjectReference Include="..\SyaBot.Shared\SyaBot.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <RdXmlFile Include="rd.xml" />
+  </ItemGroup>
+
 </Project>
